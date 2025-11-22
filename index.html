@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaPulse Logo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        color-scheme: dark;
+        --bg: radial-gradient(circle at top, #121826 0%, #05070c 55%, #020203 100%);
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.12);
+        --accent-strong: #0ea5e9;
+        --glow: rgba(14, 165, 233, 0.35);
+        --text: #f8fafc;
+        --muted: #94a3b8;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      main {
+        text-align: center;
+        padding: 3rem;
+        border-radius: 32px;
+        background: linear-gradient(145deg, rgba(9, 13, 24, 0.92), rgba(3, 6, 14, 0.92));
+        backdrop-filter: blur(12px);
+        box-shadow: 0 25px 60px rgba(1, 4, 9, 0.9), 0 0 80px rgba(14, 165, 233, 0.2);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 1.5rem;
+      }
+      svg {
+        width: min(380px, 70vw);
+        height: auto;
+        display: block;
+        margin: 0 auto 2.5rem;
+        filter: drop-shadow(0 30px 50px rgba(14, 165, 233, 0.35)) drop-shadow(0 0 60px rgba(56, 189, 248, 0.35));
+      }
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0 0 1rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0;
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        line-height: 1.6;
+        color: var(--muted);
+        max-width: 38ch;
+      }
+      footer {
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(148, 163, 184, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="badge">
+        <span>Brand Identity</span>
+      </div>
+      <svg viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+        <title id="title">NovaPulse Logo</title>
+        <desc id="desc">A futuristic emblem of concentric arcs and a radiant core</desc>
+        <defs>
+          <radialGradient id="coreGlow" cx="50%" cy="50%" r="65%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="55%" stop-color="#0ea5e9" />
+            <stop offset="100%" stop-color="rgba(56, 189, 248, 0)" />
+          </radialGradient>
+          <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#22d3ee" />
+            <stop offset="100%" stop-color="#0ea5e9" />
+          </linearGradient>
+          <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(56, 189, 248, 0)" />
+            <stop offset="50%" stop-color="rgba(56, 189, 248, 0.15)" />
+            <stop offset="100%" stop-color="rgba(56, 189, 248, 0)" />
+          </linearGradient>
+        </defs>
+        <circle cx="256" cy="256" r="118" fill="url(#coreGlow)" opacity="0.9" />
+        <g stroke-linecap="round" fill="none" stroke-width="24">
+          <path
+            d="M256 130c78 0 126 53 132 119"
+            stroke="url(#arcGradient)"
+            stroke-linejoin="round"
+            opacity="0.9"
+          />
+          <path
+            d="M256 382c-78 0-126-53-132-119"
+            stroke="url(#arcGradient)"
+            stroke-linejoin="round"
+            opacity="0.6"
+          />
+          <path
+            d="M148 208c24-46 62-78 108-86"
+            stroke="url(#arcGradient)"
+            opacity="0.5"
+          />
+          <path
+            d="M364 304c-24 46-62 78-108 86"
+            stroke="url(#arcGradient)"
+            opacity="0.4"
+          />
+        </g>
+        <circle cx="256" cy="256" r="190" stroke="url(#ringGradient)" stroke-width="20" fill="none" />
+        <circle cx="256" cy="256" r="8" fill="#e0f2fe" />
+        <g fill="#38bdf8">
+          <circle cx="338" cy="178" r="6.5" opacity="0.75" />
+          <circle cx="182" cy="334" r="6.5" opacity="0.65" />
+          <circle cx="312" cy="336" r="5" opacity="0.7" />
+          <circle cx="190" cy="166" r="5" opacity="0.6" />
+        </g>
+        <g stroke="rgba(14, 165, 233, 0.35)" stroke-linecap="round" stroke-width="6" opacity="0.5">
+          <path d="M256 88v38" />
+          <path d="M256 386v38" />
+          <path d="M426 256h-38" />
+          <path d="M124 256h-38" />
+        </g>
+      </svg>
+      <h1>NovaPulse</h1>
+      <p>Futuristic pulse of innovation. A logo designed to capture momentum, focus, and bold forward motion.</p>
+      <footer>Designed · 2024</footer>
+    </main>
+  </body>
+</html>
